@@ -9,10 +9,13 @@
 
     <context:property-placeholder ignore-unresolvable="true" location="classpath:/conf/api.properties"/>
 
+    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+    <mvc:resources mapping="/webjars/**"
+                   location="classpath:/META-INF/resources/webjars/" />
 
     <!-- 配置自动扫描的包 -->
     <!-- 如果扫描的是*，就会扫描spring自身-->
-    <context:component-scan base-package="com.dzr.api.app.*"></context:component-scan>
+    <context:component-scan base-package="com.dzr.api.*"></context:component-scan>
 
 
     <!-- 激活基于注解的配置 @RequestMapping, @ExceptionHandler,数据绑定 ,@NumberFormat

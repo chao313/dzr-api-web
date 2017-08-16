@@ -26,4 +26,12 @@ public class TestController {
         return "true";
     }
 
+    @ApiOperation(value = "登录", notes = "登录")
+    @RequestMapping(value = "/sign", method = RequestMethod.GET)
+    @ResponseBody
+    public String ttt() {
+
+        return "true";
+    }
+
 }
