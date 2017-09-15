@@ -34,4 +34,12 @@ public class TestController {
         return "true";
     }
 
+    @ApiOperation(value = "登出", notes = "登出")
+    @RequestMapping(value = "/signOut", method = RequestMethod.GET)
+    @ResponseBody
+    public String signOut() {
+
+        return "登出成功";
+    }
+
 }
